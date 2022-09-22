@@ -1,0 +1,135 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 0px 22rem;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+  font-size: 1.8rem;
+  width: 8.2rem;
+  border: 1px solid white;
+  margin-right: 6.3rem;
+  text-align: center;
+}
+.logo:link {
+  color: white;
+  text-decoration: none;
+}
+
+.navigation {
+  display: flex;
+  gap: 5.8rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-right: 43.8rem;
+  padding: 2.9rem 0;
+}
+.navigation__link:link {
+  color: white;
+  text-decoration: none;
+}
+
+.designed-by {
+  display: block;
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+.designed-by:link {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  background-image: url("img/panda.png");
+  height: 700px;
+  background-position: bottom;
+  position: relative;
+  margin-bottom: 14rem;
+}
+
+.hero__text-box {
+  position: absolute;
+  top: 8.6rem;
+  left: 88rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+}
+
+.hero__heading {
+  font-size: 10.6rem;
+  width: 500px;
+  line-height: 75%;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+.hero__heading span {
+  color: #ffee2e;
+}
+
+.hero__button {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  background-color: #f9804b;
+  width: 300px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10rem;
+}
+
+.about {
+  width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  gap: 8.7rem;
+  margin-bottom: 18rem;
+}
+
+.about__heading {
+  font-size: 4.8rem;
+  margin-bottom: 2rem;
+}
+
+.about__text-1 {
+  font-size: 1.6rem;
+  margin-bottom: 5.4rem;
+}
+
+.about__text-2 {
+  font-size: 2.4rem;
+  margin-bottom: 3.4rem;
+}
+
+.about__text-3 {
+  font-size: 1.6rem;
+}
