@@ -1,5 +1,16 @@
 :root {
-  --orange: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  --default-orange: #f9804b;
+  --hover-orange: #e47209;
+
+  --default-pink: #febdab;
+
+  --default-green: #4b9200;
+
+  --default-orange-gradient: linear-gradient(
+    113.96deg,
+    #f9804b 1.49%,
+    #fe9013 101.44%
+  );
 }
 
 html {
@@ -47,6 +58,11 @@ body {
   text-decoration: none;
 }
 
+.logo-text {
+  font-size: 1.9rem;
+  font-weight: 400;
+}
+
 .logo-bamboo {
   position: absolute;
   left: 13.23px;
@@ -65,6 +81,10 @@ body {
 :visited {
   color: white;
   text-decoration: none;
+}
+.navigation__link:hover {
+  color: var(--default-orange);
+  transition: 0.5s color;
 }
 
 .navigation__link-active {
@@ -88,6 +108,17 @@ body {
   background-size: cover;
   position: relative;
   margin-bottom: 14rem;
+  position: relative;
+}
+
+.hero-orange-circle {
+  position: absolute;
+  width: 46.5rem;
+  height: 46.5rem;
+  border-radius: 50%;
+  left: calc(50% - 465px / 2 + 239.5px);
+  top: 1.2rem;
+  background-color: var(--default-orange);
 }
 
 .hero__text-box {
@@ -119,7 +150,7 @@ body {
   text-transform: uppercase;
   color: white;
   text-decoration: none;
-  background: var(--orange);
+  background-color: var(--default-orange);
   width: 300px;
   height: 54px;
   display: flex;
@@ -128,12 +159,27 @@ body {
   border-radius: 10rem;
 }
 
+.button:hover {
+  background-color: var(--hover-orange);
+  transition: 0.5s all;
+}
+
 .about {
+  margin-bottom: 18rem;
+  position: relative;
+}
+
+.about-decoration {
+  position: absolute;
+  bottom: -10rem;
+  right: 0rem;
+}
+
+.about-wrapper {
   width: 1160px;
   margin: 0 auto;
   display: flex;
   gap: 8.7rem;
-  margin-bottom: 18rem;
 }
 
 .about__heading {
@@ -156,23 +202,87 @@ body {
 }
 
 .animals {
+  margin-bottom: 10rem;
+  position: relative;
+}
+
+.animals-wrapper {
   width: 116rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 10rem;
 }
+
 .animals-grid {
   display: grid;
   grid-template-columns: repeat(3, 36.6rem);
   column-gap: 3rem;
   row-gap: 2rem;
   margin-bottom: 8rem;
+  position: relative;
+}
+
+.animals-arrow {
+  width: 6.2rem;
+  height: 6.2rem;
+  background-color: var(--default-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  position: absolute;
+}
+.animals-arrow:hover {
+  background-color: var(--hover-orange);
+  transition: 0.5s background-color;
+  cursor: pointer;
+}
+
+.animals-arrow--right {
+  width: 6.2rem;
+  height: 6.2rem;
+  background-color: var(--default-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  position: absolute;
+  left: -8rem;
+  bottom: 46.5%;
+}
+
+.animals-arrowright-icon {
+  transform: rotate(180deg);
+}
+
+.animals-arrow--left {
+  width: 6.2rem;
+  height: 6.2rem;
+  background-color: var(--default-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  position: absolute;
+  right: -8rem;
+  bottom: 46.5%;
+}
+
+.animals-decoration-1 {
+  position: absolute;
+  left: 0rem;
+  bottom: -10rem;
+}
+
+.animal-decoration-2 {
+  position: absolute;
+  right: 0rem;
+  bottom: -10rem;
 }
 
 .animal-card {
-  outline: 1px solid #fe9013;
+  outline: 1px solid var(--default-orange);
   border-radius: 0.5rem;
 }
 
@@ -199,27 +309,11 @@ body {
   height: 100rem;
   margin-bottom: 14rem;
   background: linear-gradient(
-      315.75deg,
-      rgba(254, 210, 144, 0.7) 30.06%,
-      #febdab 100.95%,
-      rgba(254, 210, 144, 0.7) 106.36%
-    ),
-    linear-gradient(
-      315.75deg,
-      rgba(254, 189, 171, 0.74) 30.06%,
-      rgba(243, 169, 248, 0.66) 50.74%,
-      #e0d8f0 80.49%,
-      #eaf7fe 127.9%,
-      #eaf7fe 149.54%
-    ),
-    linear-gradient(
-      315.75deg,
-      rgba(254, 189, 171, 0.74) 30.06%,
-      rgba(243, 169, 248, 0.66) 50.74%,
-      #e0d8f0 80.49%,
-      #eaf7fe 127.9%,
-      #eaf7fe 149.54%
-    );
+    315.75deg,
+    rgba(254, 210, 144, 0.7) 30.06%,
+    #febdab 100.95%,
+    rgba(254, 210, 144, 0.7) 106.36%
+  );
   opacity: 0.9;
 }
 
@@ -255,6 +349,12 @@ body {
   font-size: 1.6rem;
   margin-bottom: 6rem;
 }
+.payment-link:link,
+visited {
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid var(--default-orange);
+}
 
 .how-heading {
   font-size: 3.6rem;
@@ -268,6 +368,10 @@ body {
   align-items: center;
   gap: 3rem;
   margin-bottom: 6rem;
+}
+
+.how-item {
+  width: 16.8rem;
 }
 
 .how-icon-box {
@@ -295,11 +399,18 @@ body {
 
 .testimonials {
   margin-bottom: 18rem;
+  position: relative;
 }
 
 .testimonials-wrapper {
   width: 116rem;
   margin: 0 auto;
+}
+
+.testimonials-decoration {
+  position: absolute;
+  right: 0rem;
+  bottom: -28rem;
 }
 
 .testimonials-heading {
@@ -319,7 +430,7 @@ body {
 .testimonial {
   border-radius: 2rem;
   background: #f1f3f2;
-  border: 2px solid #febdab;
+  border: 2px solid var(--default-pink);
   padding: 1.5rem 1.5rem 1.9rem 1.6rem;
 }
 
@@ -359,7 +470,7 @@ body {
 .testimonials-line-scroll-active {
   position: absolute;
   border-radius: 0.5rem;
-  background-color: orange;
+  background-color: var(--default-orange);
   width: 11.5rem;
   height: 100%;
   top: 0rem;
@@ -393,9 +504,6 @@ body {
   margin: 0;
 }
 
-.footer-subscribe {
-}
-
 .footer-subscribe-heading {
   font-size: 2.4rem;
   margin-bottom: 1.4rem;
@@ -410,9 +518,15 @@ body {
   padding: 1rem 1rem;
   background-color: #111115;
   color: #bdbdbd;
-  border: 0.07rem solid orange;
+  border: 0.07rem solid var(--default-orange);
+  outline: none;
   font-size: 1.6rem;
   border-radius: 0.2rem;
+}
+
+.footer-form-input:focus {
+  border-color: var(--default-green);
+  transition: 0.5s border-color;
 }
 
 .footer-form-button {
@@ -425,7 +539,7 @@ body {
 
 .button--footer {
   border-radius: 0.5rem;
-  background: var(--orange);
+  background-color: var(--default-orange);
   margin-bottom: 4.4rem;
 }
 
@@ -456,9 +570,16 @@ body {
   justify-content: center;
   border-radius: 100%;
 }
+.icon-box:hover {
+  background-color: var(--default-green);
+}
 
 .socials-name {
   font-size: 1.6rem;
+  text-decoration: none;
+}
+.socials-name:hover {
+  color: var(--default-green);
 }
 
 .footer-navigation {
