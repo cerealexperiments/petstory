@@ -1,0 +1,21 @@
+.navigation {
+  display: flex;
+  list-style: none;
+  gap: 58px;
+  font-weight: 500;
+
+  @media (max-width: 1000px) {
+    gap: 48px;
+  }
+
+  li a:link,
+  :visited {
+    color: $color-light;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-secondary;
+      @extend %transition;
+    }
+  }
+}

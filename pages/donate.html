@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <a href="#" class="logo header__logo">
+          <h1>PetStory online</h1>
+        </a>
+        <span class="hamburger header__hamburger">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </span>
+        <nav class="header__navigation">
+          <ul class="navigation">
+            <li><a href="../index.html">About</a></li>
+            <li><a href="#">Map</a></li>
+            <li><a href="#">Zoos</a></li>
+            <li><a href="#">Donate</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </nav>
+        <a href="#" class="header__designed-by">Designed by &copy;</a>
+      </div>
+    </header>
+
+    <img src="../img/panda_bg.png" alt="" class="panda-bg" />
+
+    <main class="main">
+      <div class="wrapper">
+        <h4 class="main__heading-1">
+          the zoo has officially reopened but we still need your help
+        </h4>
+        <p class="main__text-1">
+          Even though the Zoo has been able to reopen, we are at a greatly
+          reduced capacity with educational programs and public and private
+          events cancelled or postponed for additional months. We need you now
+          more than ever to help ensure that we overcome these challenges. We
+          have been actively raising funds in the community, and we are grateful
+          for the generosity. But much more support is still needed, and we need
+          your help! Please consider a gift today – no matter what size – to
+          help us sustain our mission.
+        </p>
+        <h4 class="main__heading-2">Donation Information</h4>
+
+        <div class="content">
+          <h3 class="content__heading">Pick and feed a friend</h3>
+          <p class="content__text-1">
+            We know the animals bring you joy, and in these extraodinary times,
+            we're glad.
+          </p>
+
+          <div class="panda-box">
+            <div class="panda-box__text-box">
+              <p class="panda-box__amount">4</p>
+              <p class="panda-box__text">Panda diet for the day.</p>
+            </div>
+            <img class="panda-box__x" src="../img/main/x.svg" alt="" />
+            <img class="panda-box__svg" src="../img/main/panda.svg" alt="" />
+          </div>
+
+          <form class="form">
+            <div class="form__wrapper">
+              <input
+                type="number"
+                class="form__input"
+                placeholder="Another amount"
+              />
+              <div class="form__radio-inputs">
+                <input
+                  name="radio"
+                  value="monthly"
+                  id="monthly"
+                  class="form__radio-input"
+                  type="radio"
+                />
+                <label for="monthly" class="label-1">Monthly</label>
+                <input
+                  name="radio"
+                  value="once"
+                  checked
+                  id="once"
+                  class="form__radio-input"
+                  type="radio"
+                />
+                <label for="once">Once</label>
+              </div>
+
+              <a href="#" class="button button--round form__button"
+                >feed a friend now</a
+              >
+              <p class="form__text">
+                Share with your friends on social networks
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer__block-1">
+          <a href="#" class="footer__logo">PetStory online</a>
+          <div class="footer__subscribe">
+            <p>Subscribe to our news</p>
+            <form class="footer__form">
+              <input
+                type="text"
+                class="footer__input"
+                placeholder="Enter your email"
+              />
+              <button class="footer__form-button">Submit</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer__button">
+          <a href="#" class="button button--square">donate for volunteers</a>
+        </div>
+        <div class="footer__block-2">
+          <div class="footer__socials">
+            <div class="social">
+              <div class="social__icon">
+                <img src="../img/footer/facebook.svg" alt="" />
+              </div>
+              <p class="social__name">Facebook</p>
+            </div>
+            <div class="social">
+              <div class="social__icon">
+                <img src="../img/footer/twitter.svg" alt="" />
+              </div>
+              <p class="social__name">Twitter</p>
+            </div>
+            <div class="social">
+              <div class="social__icon">
+                <img src="../img/footer/instagram.svg" alt="" />
+              </div>
+              <p class="social__name">Instagram</p>
+            </div>
+            <div class="social">
+              <div class="social__icon">
+                <img src="../img/footer/youtube.svg" alt="" />
+              </div>
+              <p class="social__name">YouTube</p>
+            </div>
+          </div>
+          <nav class="footer__navigation">
+            <ul class="navigation">
+              <li><a href="../index.html">About</a></li>
+              <li><a href="#">Map</a></li>
+              <li><a href="#">Zoos</a></li>
+              <li class="navigation__donate"><a href="#">Donate</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </nav>
+          <p class="footer__credits">
+            Designed by Alisa Samborskaya ©RSSchool & ©Yem Digital 2021
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

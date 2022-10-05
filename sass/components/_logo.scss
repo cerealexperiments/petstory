@@ -1,0 +1,19 @@
+.logo {
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid white;
+  width: 82px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 999px) {
+    width: 46px;
+    height: 29px;
+    border: none;
+  }
+
+  &:visited {
+    color: white;
+  }
+}
