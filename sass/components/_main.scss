@@ -1,3 +1,20 @@
+.panda-bg {
+  display: block;
+  padding-top: 80px;
+  object-position: center;
+  @media (max-width: 1000px) {
+    height: 470px;
+  }
+  @media (max-width: 640px) {
+    padding-top: 34px;
+    height: 370px;
+    object-position: center;
+  }
+  @media (max-width: 320px) {
+    height: 221px;
+  }
+}
+
 .main {
   background: linear-gradient(
     315.75deg,
@@ -7,6 +24,9 @@
   );
   padding-bottom: 180px;
   padding-top: 40px;
+  @media (max-width: 1000px) {
+    padding-bottom: 30px;
+  }
   @media (max-width: 640px) {
     padding-top: 30px;
     padding-bottom: 46px;
@@ -19,6 +39,14 @@
     text-transform: uppercase;
     color: white;
     margin-bottom: 10px;
+    line-height: 130%;
+    @media (max-width: 1000px) {
+      margin-bottom: 30px;
+    }
+    @media (max-width: 640px) {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
     @media (max-width: 320px) {
       font-size: 24px;
     }
@@ -26,11 +54,27 @@
   &__text-1 {
     font-weight: 500;
     color: white;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
+    line-height: 140%;
+    @media (max-width: 640px) {
+      margin-bottom: 30px;
+    }
+    @media (max-width: 320px) {
+      margin-bottom: 20px;
+    }
   }
   &__heading-2 {
     color: $color-primary;
     margin-bottom: 60px;
+    @media (max-width: 1000px) {
+      margin-bottom: 40px;
+    }
+    @media (max-width: 640px) {
+      margin-bottom: 30px;
+    }
+    @media (max-width: 320px) {
+      font-size: 24px;
+    }
   }
 }
 
@@ -40,16 +84,31 @@
   backdrop-filter: blur(2px);
   border-radius: 20px;
 
+  @media (max-width: 1000px) {
+    padding: 20px 44px 46px 47px;
+  }
   @media (max-width: 640px) {
     padding: 30px 0px 30px 0px;
+  }
+  @media (max-width: 320px) {
+    padding: 20px 0px 20px 0px;
   }
 
   &__heading {
     text-align: center;
     color: $color-primary;
     margin-bottom: 20px;
+    @media (max-width: 1000px) {
+      margin-bottom: 10px;
+    }
+    @media (max-width: 640px) {
+      margin-bottom: 20px;
+    }
     @media (max-width: 520px) {
       font-size: 24px;
+    }
+    @media (max-width: 320px) {
+      margin-bottom: 15px;
     }
   }
   &__text-1 {
@@ -69,8 +128,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 4.8rem;
+  margin-bottom: 215px;
   position: relative;
+  @media (max-width: 640px) {
+    margin-bottom: 190px;
+  }
+  @media (max-width: 320px) {
+    margin-bottom: 80px;
+  }
 
   &__text-box {
     display: flex;
@@ -126,6 +191,9 @@
     border: 1px solid #929699;
     border-radius: 2px;
     margin-bottom: 2.5rem;
+    @media (max-width: 640px) {
+      width: 180px;
+    }
     @media (max-width: 320px) {
       width: 180px;
     }
@@ -144,11 +212,14 @@
   }
 
   &__button {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
   }
 
   &__text {
     text-align: center;
+    @media (max-width: 320px) {
+      font-size: 12px;
+    }
   }
 }
 
