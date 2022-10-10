@@ -118,8 +118,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgb(0, 0, 0, 0.1);
+  background: rgb(0, 0, 0, 0.2);
   z-index: 19;
+  transition: background 0.3s;
 }
 
 .review.popup {
@@ -128,7 +129,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 20;
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  transition: all 0.3s ease-out;
   @media (max-width: 640px) {
     max-height: 391px;
     overflow: scroll;
