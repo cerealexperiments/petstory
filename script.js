@@ -6,6 +6,8 @@ const overlay = document.querySelector(".overlay");
 const reviews = document.querySelectorAll(".review");
 const petsArrows = document.querySelectorAll(".pets__arrow");
 const pets = document.querySelectorAll(".pet");
+const testimonialsInput = document.querySelector(".input-range");
+const testimonialsReviews = document.querySelector(".testimonials__reviews");
 
 const animals = [
   {
@@ -88,21 +90,67 @@ document.querySelectorAll(".review").forEach((item) => {
   });
 });
 
-petsArrows.forEach((item) => {
-  item.addEventListener("click", () => {
-    console.log("arrow clicked!");
-    console.log("random animal:");
-    console.log(getRandomItem());
-    shuffle(animals);
-    console.log(animals);
-    const newPets = [...animals];
-    for (let i = 0; i < pets.length; i++) {
-      petImage = pets[i].querySelector(".pet__image");
-      petName = pets[i].querySelector(".pet__name");
-      petLocation = pets[i].querySelector(".pet__location");
-      petImage.src = newPets[i].imageUrl;
-      petName.innerHTML = newPets[i].name;
-      petLocation.innerHTML = newPets[i].location;
-    }
+for (let arrowIndex = 0; arrowIndex < petsArrows.length; arrowIndex++) {
+  petsArrows[arrowIndex].addEventListener("click", () => {
+    setTimeout(() => {
+      shuffle(animals);
+      console.log(animals);
+      const newPets = [...animals];
+      for (let i = 0; i < pets.length; i++) {
+        petImage = pets[i].querySelector(".pet__image");
+        petName = pets[i].querySelector(".pet__name");
+        petLocation = pets[i].querySelector(".pet__location");
+        petImage.src = newPets[i].imageUrl;
+        petName.innerHTML = newPets[i].name;
+        petLocation.innerHTML = newPets[i].location;
+        if (arrowIndex == 0) {
+          pets[i].classList.add("scrollLeft");
+          setTimeout(() => pets[i].classList.remove("scrollLeft"), 500);
+        } else {
+          pets[i].classList.add("scrollRight");
+          setTimeout(() => pets[i].classList.remove("scrollRight"), 500);
+        }
+      }
+    });
   });
+}
+
+testimonialsInput.addEventListener("input", (event) => {
+  let inputValue = testimonialsInput.value;
+  testimonialsReviews.classList.add("scroll-2");
+  setTimeout(() => testimonialsReviews.classList.remove("scroll-2"), 500);
+  console.log(`value: ${inputValue}`);
+  if (inputValue == 1) {
+    document.querySelector(".review-1").classList.add("removeReview");
+    document.querySelector(".review-2").classList.remove("removeReview");
+  } else if (inputValue == 0) {
+    document.querySelector(".review-1").classList.remove("removeReview");
+  } else if (inputValue == 2) {
+    document.querySelector(".review-2").classList.add("removeReview");
+    document.querySelector(".review-3").classList.remove("removeReview");
+  } else if (inputValue == 3) {
+    document.querySelector(".review-3").classList.add("removeReview");
+    document.querySelector(".review-4").classList.remove("removeReview");
+  } else if (inputValue == 4) {
+    document.querySelector(".review-4").classList.add("removeReview");
+    document.querySelector(".review-5").classList.remove("removeReview");
+  } else if (inputValue == 5) {
+    document.querySelector(".review-5").classList.add("removeReview");
+    document.querySelector(".review-6").classList.remove("removeReview");
+  } else if (inputValue == 6) {
+    document.querySelector(".review-6").classList.add("removeReview");
+    document.querySelector(".review-7").classList.remove("removeReview");
+  } else if (inputValue == 7) {
+    document.querySelector(".review-7").classList.add("removeReview");
+    document.querySelector(".review-8").classList.remove("removeReview");
+  }
 });
+
+//better solution
+/* let prevValue = testimonialsInput.value - 1;
+let inputValue = testimonialsInput.value;
+console.log(`current value: ${inputValue}`);
+console.log(`previous value: ${prevValue}`);
+let firstItem = document.querySelector(`.review-${inputValue}`);
+let prevItem = document.querySelector(`.review-${prevValue}`);
+firstItem.classList.add("removeReview"); */

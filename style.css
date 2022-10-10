@@ -954,6 +954,16 @@ h4 {
   cursor: pointer;
 }
 
+.scrollLeft {
+  animation-name: leftPopOut;
+  animation-duration: 0.5s;
+}
+
+.scrollRight {
+  animation-name: rightPopOut;
+  animation-duration: 0.5s;
+}
+
 .pet {
   outline: 1px solid #f9804b;
   border-radius: 5px;
@@ -1007,6 +1017,22 @@ h4 {
   }
 }
 
+@keyframes leftPopOut {
+  0% {
+    transform: translateX(-400%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes rightPopOut {
+  0% {
+    transform: translateX(400%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .pick-and-feed {
   background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #febdab 100.95%, rgba(254, 210, 144, 0.7) 106.36%);
   padding-top: 70px;
@@ -1423,6 +1449,10 @@ h4 {
   }
 }
 
+.removeReview {
+  display: none;
+}
+
 .overlay.active {
   position: fixed;
   width: 100%;
@@ -1524,6 +1554,30 @@ h4 {
   -webkit-appearance: none;
 }
 
+.scroll-1 {
+  animation: leftScroll 0.3s;
+}
+
+.scroll-2 {
+  animation: rightScroll 0.3s;
+}
+
+@keyframes leftScroll {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes rightScroll {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .panda-bg {
   display: block;
   width: 100%;
