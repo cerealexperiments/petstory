@@ -63,17 +63,25 @@ function shuffle(array) {
   }
 }
 
-hamburger.addEventListener("click", () => {
+hamburger.addEventListener("click", (e) => {
   hamburger.classList.toggle("active");
-  header.classList.toggle("active");
+  header.classList.toggle("header__active");
   navigation.classList.toggle("active");
   navigationBlock.classList.toggle("active");
+  e.stopPropagation();
+});
+
+header.addEventListener("click", () => {
+  console.log("header clicked");
+  header.classList.remove("header__active");
+  navigation.classList.remove("active");
+  navigationBlock.classList.remove("active");
 });
 
 document.querySelectorAll(".header-link").forEach((item) => {
   item.addEventListener("click", () => {
     hamburger.classList.remove("active");
-    header.classList.remove("active");
+    header.classList.remove("header__active");
     navigation.classList.remove("active");
     navigationBlock.classList.remove("active");
   });
@@ -115,7 +123,7 @@ for (let arrowIndex = 0; arrowIndex < petsArrows.length; arrowIndex++) {
   });
 }
 
-testimonialsInput.addEventListener("input", (event) => {
+testimonialsInput.addEventListener("input", () => {
   let inputValue = testimonialsInput.value;
   testimonialsReviews.classList.add("scroll-2");
   setTimeout(() => testimonialsReviews.classList.remove("scroll-2"), 500);
