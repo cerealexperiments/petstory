@@ -154,7 +154,7 @@ testimonialsInput.addEventListener("input", () => {
   }
 });
 
-//better solution
+//better solution but doesnt work with scrolling back
 /* let prevValue = testimonialsInput.value - 1;
 let inputValue = testimonialsInput.value;
 console.log(`current value: ${inputValue}`);

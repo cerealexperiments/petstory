@@ -1,0 +1,131 @@
+.amount {
+}
+
+.amount__track {
+  margin-bottom: 10px;
+  background: #404950;
+  border-radius: 2px;
+  width: 100%;
+  height: 27px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 13px 9px 26px;
+  position: relative;
+}
+
+.amount__track::before {
+  content: "";
+  position: absolute;
+  width: calc(100% - 61px);
+  height: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #72828e;
+  pointer-events: none;
+}
+
+.amount__button {
+  border: none;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  cursor: pointer;
+  margin-left: -15px;
+}
+
+.amount__point {
+  transition: all 0.3s ease;
+  padding: 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ffee2e;
+  border: none;
+  cursor: pointer;
+  pointer-events: none;
+  position: relative;
+  z-index: 1;
+}
+
+.amount__point::before {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  width: 22.95px;
+  height: 22.95px;
+  border: 2px solid #fe9013;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+.amount__point::after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fe9013;
+  border-radius: 50%;
+  left: -17px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.point--active::before {
+  opacity: 1;
+}
+
+.point--active::after {
+  opacity: 1;
+}
+
+.amount__prices {
+  padding-right: 25px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.amount__price {
+  width: 42px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #333b41;
+  transition: all 0.3s ease;
+}
+
+.price--active {
+  color: $color-primary;
+}
+
+@media (max-width: 1000px) {
+  .price--5000 {
+    display: none;
+  }
+  .button--5000 {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .price--2000 {
+    display: none;
+  }
+  .button--2000 {
+    display: none;
+  }
+  .price--1000 {
+    display: none;
+  }
+  .button--1000 {
+    display: none;
+  }
+}

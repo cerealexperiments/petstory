@@ -72,12 +72,54 @@
             <img class="panda-box__svg" src="../img/main/panda.svg" alt="" />
           </div>
 
+          <div class="amount">
+            <div class="amount__track">
+              <button class="amount__button button--5000">
+                <span class="amount__point"></span>
+              </button>
+              <button class="amount__button button--2000">
+                <span class="amount__point"></span>
+              </button>
+              <button class="amount__button button--1000">
+                <span class="amount__point"></span>
+              </button>
+              <button class="amount__button">
+                <span class="amount__point"></span>
+              </button>
+              <button class="amount__button">
+                <span class="amount__point"></span>
+              </button>
+              <button class="amount__button">
+                <span class="amount__point point--active"></span>
+              </button>
+              <button class="amount__button">
+                <span class="amount__point"></span>
+              </button>
+              <button class="amount__button">
+                <span class="amount__point"></span>
+              </button>
+            </div>
+
+            <div class="amount__prices">
+              <p class="amount__price price--5000">$5000</p>
+              <p class="amount__price price--2000">$2000</p>
+              <p class="amount__price price--1000">$1000</p>
+              <p class="amount__price">$500</p>
+              <p class="amount__price">$250</p>
+              <p class="amount__price price--active">$100</p>
+              <p class="amount__price">$50</p>
+              <p class="amount__price">$25</p>
+            </div>
+          </div>
+
           <form class="form">
             <div class="form__wrapper">
               <input
                 type="number"
                 class="form__input"
                 placeholder="Another amount"
+                min="0"
+                max="9999"
               />
               <div class="form__radio-inputs">
                 <input
@@ -174,6 +216,6 @@
         </div>
       </div>
     </footer>
-    <script src="../script.js"></script>
+    <script src="../donateScript.js"></script>
   </body>
 </html>
